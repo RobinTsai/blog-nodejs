@@ -1,6 +1,11 @@
-models
-public
-routes
+models/*.js
+public/images/*
+public/stylesheets/*
+public/javascripts/*
+!public/images/.gitkeep
+!public/stylesheets/.gitkeep
+!public/javascripts/.gitkeep
+routes/*.js
 node_modules
 routes
 .sass-cache
