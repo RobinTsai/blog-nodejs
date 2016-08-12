@@ -1,0 +1,24 @@
+<br/>
+<% post.comments.forEach(function (comment, index) {
+  comment = JSON.parse(comment)
+  %>
+  <p><a href="<%= comment.website %>"><%= comment.name%></a></p>
+  <span class="info">Reply at <%= comment.time %></span>
+  <p><%- comment.content %></p>
+<% }) %>
+
+<hr/><br/>
+
+<form method="post">
+<% if (user) { %>
+  name: <input type="text" name="name" value="<%= user.name %>"/><br/>
+  email: <input type="text" name="email" value="<%= user.email %>"/><br/>
+  webSite: <input type="text" name="website" value="/u/<%= user.name %>"/><br/>
+<% } else { %>
+  name: <input type="text" name="name" /><br/>
+  email: <input type="text" name="email" /><br/>
+  webSite: <input type="text" name="website" value="http://" /><br/>
+<% } %>
+<textarea name="content" rows="5" cols="80"></textarea><br/>
+<input type="submit" value="Comment" />
+</form>

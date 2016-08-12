@@ -1,0 +1,105 @@
+$header-color: #ccc;
+$color-black: #000;
+$color-hover-a: #f9f9f9;
+$color-hover-a-bg: #f00;
+$page-selection-color: #f00;
+$page-selected-bg: #f00;
+$page-selected-color: #f9f9f9;
+$archive-time-color: #999;
+
+body {
+  padding: 0 2em;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+  width: 600px;
+  margin: 2em auto;
+}
+
+p {
+  line-height: 24px;
+  margin: 1em 0;
+}
+
+header {
+  padding: .5em 0;
+  border-bottom: 1px solid $header-color;
+}
+
+nav {
+  float: left;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-left: -12em;
+  width: 9em;
+  text-align: right;
+
+  a {
+    display: block;
+    text-decoration: none;
+    padding: .7em 1em;
+    color: $color-black;
+
+    &:hover {
+      background-color: $color-hover-a-bg;
+      color: $color-hover-a;
+      -webkit-transition: color .2s linear;
+    }
+  }
+}
+
+article {
+  font-size: 16px;
+  padding-top: .5em;
+}
+
+.info {
+  font-size: 14px;
+}
+
+%pagination {
+  a {
+    text-decoration: none;
+    padding: .5em 1em;
+    color: $page-selection-color;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: none;
+    background-color: $page-selected-bg;
+    color: $page-selected-color;
+    -webkit-transform: color .2s linear;
+  }
+}
+
+.prepage {
+  @extend %pagination;
+
+  a {
+    float: left;
+  }
+}
+
+.nextpage {
+  @extend %pagination;
+
+  a {
+    float: right;
+  }
+}
+
+.archive {
+  list-style: none;
+  line-height: 28px;
+
+  h3 {
+    margin: .5em 0;
+  }
+
+  time {
+    float: left;
+    font-size: 14px;
+    color: $archive-time-color;
+    margin-right: 1.2em;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "folder_exclude_patterns": [
+        "bin",
+        "node_modules",
+        "static",
+        ".*"
+      ],
+      "file_exclude_patterns": [
+        "*.log",
+        "*.css.map"
+      ]
+    },
+    {
+      "path": "./static"
+    }
+  ]
+}
